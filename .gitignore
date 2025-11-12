@@ -1,11 +1,6 @@
-# Archivos sensibles o pesados que NO deben subirse a GitHub
+# Archivos sensibles que NO deben subirse a GitHub
 
-# Videos (muy pesados para GitHub)
-videos de proyectos/**/*.mp4
-videos de proyectos/**/*.mov
-videos de proyectos/**/*.avi
-
-# Imagen personal (excluida por privacidad - funciona localmente pero no se sube a GitHub)
+# Imagen personal (excluida por privacidad - funciona localmente pero NO se sube a GitHub)
 e0d7938a-bd4e-4706-a52d-ca09a0020f7b.png
 
 # Archivos descargados innecesarios
