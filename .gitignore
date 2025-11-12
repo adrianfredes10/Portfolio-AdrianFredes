@@ -1,0 +1,25 @@
+# Archivos sensibles o pesados que NO deben subirse a GitHub
+
+# Videos (muy pesados para GitHub)
+videos de proyectos/**/*.mp4
+videos de proyectos/**/*.mov
+videos de proyectos/**/*.avi
+
+# Imagen personal (opcional - descomenta si quieres excluirla)
+# e0d7938a-bd4e-4706-a52d-ca09a0020f7b.png
+
+# Archivos descargados innecesarios
+estudios/
+estudios/**
+
+# Archivos temporales
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Archivos de sistema
+*.swp
+*.swo
+*~
+
