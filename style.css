@@ -548,36 +548,38 @@ body {
   position: relative;
 }
 
+/* Contenedor foto hero: mismo lenguaje visual que el sitio (oscuro + acento cian) */
 .hero-image-3d {
   transform-style: preserve-3d;
-  transition: transform 0.1s ease-out;
+  transition: transform 0.1s ease-out, box-shadow 0.3s ease;
   position: relative;
   z-index: 1;
-}
-
-/* Contenedor para aplicar filtro de fondo */
-.hero-image-3d {
-  position: relative;
-  background: var(--bg);
+  overflow: hidden;
   border-radius: 20px;
-  padding: 0;
+  background:
+    radial-gradient(ellipse 95% 90% at 50% 100%, rgba(110, 231, 255, 0.14) 0%, transparent 52%),
+    radial-gradient(ellipse 85% 65% at 50% 0%, hsla(240, 10%, 12%, 0.95) 0%, var(--bg-soft) 55%, var(--bg) 100%);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 24px 56px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 0 0 1px rgba(110, 231, 255, 0.06);
+  padding: 10px 10px 4px;
 }
 
 .hero-photo {
   width: 100%;
   max-width: 280px;
   height: auto;
-  border-radius: 20px;
   display: block;
-  object-fit: cover;
   position: relative;
   z-index: 1;
+  object-fit: contain;
+  object-position: center bottom;
+  border-radius: 14px;
   transition: filter 0.3s ease;
-  /* Filtros para mejorar la imagen */
-  filter: brightness(1.1) contrast(1.1) drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 40px rgba(110, 231, 255, 0.2));
-  /* Máscara para suavizar bordes */
-  -webkit-mask-image: radial-gradient(ellipse 90% 95% at 50% 50%, black 80%, transparent 100%);
-  mask-image: radial-gradient(ellipse 90% 95% at 50% 50%, black 80%, transparent 100%);
+  /* PNG con transparencia: sin máscara dura; sombra alineada al glow del layout */
+  filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 32px rgba(110, 231, 255, 0.18));
 }
 
 /* Efecto de profundidad adicional con glow */
